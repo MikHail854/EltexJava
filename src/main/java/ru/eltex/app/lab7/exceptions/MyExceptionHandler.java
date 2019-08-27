@@ -9,21 +9,31 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.io.IOException;
 
+/**
+ * @ControllerAdvice используется для глобальной обработки ошибок в приложении Spring MVC.
+ * Он также имеет полный контроль над телом ответа и кодом состояния.
+ */
+
 @ControllerAdvice
 public class MyExceptionHandler extends ResponseEntityExceptionHandler {
 
+    /**
+     * @ExceptionHandler. Эта аннотация обрабатывает исключение, произошедшее в контроллере, как обычный запрос
+     *
+     */
+
     @ExceptionHandler(NullPointerException.class)
-    protected ResponseEntity handleNullExeptions(){
+    protected ResponseEntity handleNullExeptions() {
         return new ResponseEntity("1", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(UnsatisfiedServletRequestParameterException.class)
-    private ResponseEntity wrongWay(){
+    private ResponseEntity wrongWay() {
         return new ResponseEntity("3", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(IOException.class)
-    private ResponseEntity corruptedFile(){
+    private ResponseEntity corruptedFile() {
         return new ResponseEntity("2", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

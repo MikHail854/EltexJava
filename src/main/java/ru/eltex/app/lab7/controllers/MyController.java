@@ -24,9 +24,6 @@ public class MyController {
             .registerTypeAdapter(Products.class, new ProductDeserializer()).setPrettyPrinting().create();
 
     private Orders<?> orders;
-    //BasicConfigurator.configure();
-    /*String log4jConfPath = "/path/to/log4j.properties";
-    PropertyConfigurator.configure(log4jConfPath);*/
 
     @Autowired
     public MyController(Orders<?> orders) {
@@ -42,19 +39,16 @@ public class MyController {
     @GetMapping(params = "command=readById")
     public String readById(String order_id) {
         logger.info("readById");
-        //return gson.toJson(order_id);
         return gson.toJson(orders.find(order_id));
     }
 
     @GetMapping(params = "command=addToCard")
     public String addToCard(String card_id) {
         logger.info("addToCard");
-        //Products phone = new Phone("Nokia", 5, "2017 года", 440, "Китай", "Android", "классический");
         Products phone = new Phone();
         ShoppingCart<Products> cart = (ShoppingCart<Products>) orders.getCart(card_id);
         cart.add(phone);
         return card_id;
-        //return phone.getId().toString();
     }
 
     @GetMapping(params = "command=delById")

@@ -11,12 +11,15 @@ import ru.eltex.app.lab2.Credentials;
 import ru.eltex.app.lab2.Orders;
 import ru.eltex.app.lab2.ShoppingCart;
 
+/**
+ * view
+ */
 
 @SpringBootApplication
 
-public class SpringMvsApplication {
+public class SpringMvсApplication {
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(SpringMvsApplication.class, args);
+        ApplicationContext context = SpringApplication.run(SpringMvсApplication.class, args);
         ShoppingCart<Products> cart1 = (ShoppingCart<Products>) context.getBean("Cart1");//создание корзины 1
         ShoppingCart<Products> cart2 = (ShoppingCart<Products>) context.getBean("Cart2");//создание корзины 2
 
