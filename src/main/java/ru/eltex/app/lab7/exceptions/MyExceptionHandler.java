@@ -17,13 +17,13 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity("1", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(IOException.class)
-    private ResponseEntity corruptedFile(){
-        return new ResponseEntity("2", HttpStatus.INTERNAL_SERVER_ERROR);
-    }
-
     @ExceptionHandler(UnsatisfiedServletRequestParameterException.class)
     private ResponseEntity wrongWay(){
         return new ResponseEntity("3", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(IOException.class)
+    private ResponseEntity corruptedFile(){
+        return new ResponseEntity("2", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

@@ -24,9 +24,9 @@ public class SpringMvsApplication {
         cart1.add(new Smartphone("Xiaomi", 4, "2019 года", 652, "Китай", "Android", "micro-SIM", "2"));
         cart1.add(new TheTablet("Apple", 2, "2018 года", 770, "США", "IOS", "Qualcomm", "720*1280"));
 
-        cart1.add(new Phone("Philips", 7, "2017 года", 9440, "Чехия", "Android", "раскладушка"));
-        cart1.add(new Smartphone("Honor", 4, "2019 года", 153, "Япония", "Android", "micro-SIM", "2"));
-        cart1.add(new TheTablet("Meizu", 2, "2018 года", 938, "США", "IOS", "Qualcomm", "2560*1440"));
+        cart2.add(new Phone("Philips", 7, "2017 года", 9440, "Чехия", "Android", "раскладушка"));
+        cart2.add(new Smartphone("Honor", 4, "2019 года", 153, "Япония", "Android", "micro-SIM", "2"));
+        cart2.add(new TheTablet("Meizu", 2, "2018 года", 938, "США", "IOS", "Qualcomm", "2560*1440"));
 
         Orders<?> orders = (Orders) context.getBean("Orders");
 

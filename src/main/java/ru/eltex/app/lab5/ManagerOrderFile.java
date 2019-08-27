@@ -13,7 +13,7 @@ import java.util.UUID;
 
 public final class ManagerOrderFile extends AManageOrder {
 
-    public static final String BIN_PATH = "/home/mikhail/IdeaProjects/JavaLabVar2/target/binary.bin";
+    public static final String BIN_PATH = "/home/mikhail/IdeaProjects/JavaLabNew/target/binary.bin";
 
     ManagerOrderFile() {
         target = new File(BIN_PATH);

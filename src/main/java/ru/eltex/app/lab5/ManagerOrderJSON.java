@@ -20,7 +20,7 @@ import java.util.UUID;
 
 public class ManagerOrderJSON extends AManageOrder {
 
-    public static final String JSON_PATH = "/home/mikhail/IdeaProjects/JavaLabVar2/target/result.json";
+    public static final String JSON_PATH = "/home/mikhail/IdeaProjects/JavaLabNew/target/result.json";
     private final Gson json;
 
     public ManagerOrderJSON(){
